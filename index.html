@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Scanner & Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>QR Scanner & Generator</h1>
+
+    <!-- QR Generator Section -->
+    <section>
+      <h2>Create QR Code</h2>
+      <input type="text" id="qr-input" placeholder="Enter text or link..." />
+      <button onclick="generateQRCode()">Generate QR</button>
+      <div id="qr-output"></div>
+    </section>
+
+    <!-- QR Scanner Section -->
+    <section>
+      <h2>Scan QR Code</h2>
+      <video id="preview" autoplay></video>
+      <p id="qr-result">Scan result will appear here</p>
+    </section>
+  </div>
+
+  <!-- Include QR libraries -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
